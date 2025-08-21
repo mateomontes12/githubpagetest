@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un Viaje a través de la Inteligencia Artificial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #1f2937;
+        }
+        .gradient-bg {
+            /* Nuevo degradado de fondo futurista en tonos morados */
+            background: linear-gradient(135deg, #4c1d95 0%, #6d28d9 100%);
+        }
+        .card-container {
+            perspective: 1000px;
+        }
+        .card-inner {
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .card-face-back {
+            transform: rotateY(180deg);
+        }
+        .btn-prompt {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .btn-prompt:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="gradient-bg text-white py-12 px-6 lg:px-12 rounded-b-[3rem]">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl lg:text-5xl font-bold mb-4">Inteligencia Artificial</h1>
+            <p class="text-xl lg:text-2xl font-light">Un viaje a través de las bases, herramientas y mejores prácticas de comunicación con ella.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+
+        <!-- Prompt Definition Section -->
+        <section class="my-16 text-center">
+            <h2 class="text-3xl lg:text-4xl font-bold mb-8 text-gray-900">¿Qué es un Prompt?</h2>
+            <div class="bg-blue-100 p-8 rounded-3xl shadow-lg max-w-3xl mx-auto">
+                <p class="text-xl md:text-2xl font-semibold leading-relaxed text-blue-800">
+                    "Un prompt es la clave que desbloquea el potencial de la Inteligencia Artificial."
+                </p>
+                <p class="text-md mt-4 font-light text-blue-700">
+                    “A preguntas simples respuestas simples”
+                </p>
+            </div>
+        </section>
+
+        <!-- Effective Prompt Components Section (Interactive) -->
+        <section class="my-16">
+            <h2 class="text-3xl lg:text-4xl font-bold text-center mb-12 text-gray-900">Partes de un Prompt Efectivo</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Rol Card -->
+                <div class="card-container h-80">
+                    <div class="card-inner">
+                        <!-- Front Face -->
+                        <div class="card-face bg-white p-8 rounded-3xl shadow-lg flex flex-col items-center justify-center">
+                            <span class="text-5xl mb-4 text-yellow-500 font-bold">1</span>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Rol</h3>
+                            <p class="text-center text-gray-600">Define la personalidad de la IA.</p>
+                        </div>
+                        <!-- Back Face -->
+                        <div class="card-face card-face-back bg-white p-8 rounded-3xl shadow-lg flex flex-col justify-center">
+                            <h4 class="text-xl font-bold text-gray-900 mb-4">Ejemplo de Rol:</h4>
+                            <p class="text-gray-700 leading-snug">"Actúa como un diseñador profesional de figuras coleccionables."</p>
+                            <p class="mt-4 text-sm text-gray-500">Haz clic para voltear de nuevo.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Objetivo Card -->
+                <div class="card-container h-80">
+                    <div class="card-inner">
+                        <!-- Front Face -->
+                        <div class="card-face bg-white p-8 rounded-3xl shadow-lg flex flex-col items-center justify-center">
+                            <span class="text-5xl mb-4 text-green-500 font-bold">2</span>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Objetivo</h3>
+                            <p class="text-center text-gray-600">Especifica lo que se quiere lograr.</p>
+                        </div>
+                        <!-- Back Face -->
+                        <div class="card-face card-face-back bg-white p-8 rounded-3xl shadow-lg flex flex-col justify-center">
+                            <h4 class="text-xl font-bold text-gray-900 mb-4">Ejemplo de Objetivo:</h4>
+                            <p class="text-gray-700 leading-snug">"Diseña una figura coleccionable en un paquete de estilo minimalista, etiquetado como 'MATEO'."</p>
+                            <p class="mt-4 text-sm text-gray-500">Haz clic para voltear de nuevo.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contexto Card -->
+                <div class="card-container h-80">
+                    <div class="card-inner">
+                        <!-- Front Face -->
+                        <div class="card-face bg-white p-8 rounded-3xl shadow-lg flex flex-col items-center justify-center">
+                            <span class="text-5xl mb-4 text-blue-500 font-bold">3</span>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Contexto</h3>
+                            <p class="text-center text-gray-600">Define situaciones a tomar en cuenta.</p>
+                        </div>
+                        <!-- Back Face -->
+                        <div class="card-face card-face-back bg-white p-8 rounded-3xl shadow-lg flex flex-col justify-center">
+                            <h4 class="text-xl font-bold text-gray-900 mb-4">Ejemplo de Contexto:</h4>
+                            <p class="text-gray-700 leading-snug">"Usa la foto como guía para crear el muñeco: piel clara, complexión media, brazos cruzados y ligeramente sonriente. Viste zapatillas negras, jeans azul y camiseta manga larga."</p>
+                            <p class="mt-4 text-sm text-gray-500">Haz clic para voltear de nuevo.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Restricciones Card -->
+                <div class="card-container h-80">
+                    <div class="card-inner">
+                        <!-- Front Face -->
+                        <div class="card-face bg-white p-8 rounded-3xl shadow-lg flex flex-col items-center justify-center">
+                            <span class="text-5xl mb-4 text-red-500 font-bold">4</span>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Restricciones</h3>
+                            <p class="text-center text-gray-600">Condiciones que se deben aplicar.</p>
+                        </div>
+                        <!-- Back Face -->
+                        <div class="card-face card-face-back bg-white p-8 rounded-3xl shadow-lg flex flex-col justify-center">
+                            <h4 class="text-xl font-bold text-gray-900 mb-4">Ejemplo de Restricciones:</h4>
+                            <p class="text-gray-700 leading-snug">"El paquete debe incluir objetos de videojuegos, alusión a los deportes favoritos y objetos de ingeniería... El fondo del paquete es azul grisáceo claro. La imagen debe tener orientación vertical y mantenerse en un estilo visual limpio, sin texto adicional fuera del nombre."</p>
+                            <p class="mt-4 text-sm text-gray-500">Haz clic para voltear de nuevo.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Prompt Builder Section -->
+        <section class="my-16">
+            <h2 class="text-3xl lg:text-4xl font-bold text-center mb-8 text-gray-900">Construye tu Propio Prompt</h2>
+            <div class="bg-white p-8 rounded-3xl shadow-lg max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="rol-input" class="block text-lg font-semibold mb-2">1. Rol</label>
+                        <input type="text" id="rol-input" class="w-full p-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500" placeholder="Ej: Actúa como un experto en marketing...">
+                    </div>
+                    <div>
+                        <label for="objetivo-input" class="block text-lg font-semibold mb-2">2. Objetivo</label>
+                        <input type="text" id="objetivo-input" class="w-full p-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="Ej: Escribe un eslogan para mi marca de café...">
+                    </div>
+                    <div>
+                        <label for="contexto-input" class="block text-lg font-semibold mb-2">3. Contexto</label>
+                        <input type="text" id="contexto-input" class="w-full p-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ej: Mi marca se llama 'Amanecer', es de café colombiano y orgánico.">
+                    </div>
+                    <div>
+                        <label for="restricciones-input" class="block text-lg font-semibold mb-2">4. Restricciones</label>
+                        <input type="text" id="restricciones-input" class="w-full p-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500" placeholder="Ej: El eslogan debe ser corto, memorable y optimista.">
+                    </div>
+                </div>
+                
+                <button id="generate-prompt-btn" class="mt-8 w-full md:w-auto px-8 py-4 bg-gray-800 text-white rounded-xl font-bold text-lg btn-prompt">Generar Prompt</button>
+                
+                <div id="result-container" class="mt-10 p-6 bg-gray-50 rounded-2xl border border-gray-200">
+                    <h4 class="text-xl font-bold mb-4 text-gray-900">Tu Prompt Generado:</h4>
+                    <p id="generated-prompt" class="whitespace-pre-wrap leading-relaxed text-gray-700 italic">El prompt generado aparecerá aquí.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Section (Interactive) -->
+        <section class="my-16 text-center">
+            <h2 class="text-3xl lg:text-4xl font-bold mb-8 text-gray-900">Repasemos</h2>
+            <div class="bg-white p-8 rounded-3xl shadow-lg max-w-3xl mx-auto">
+                <div id="quiz-container">
+                    <!-- Quiz questions will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-6 text-center rounded-t-3xl">
+        <p>Derechos de autor © 2024. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const quizData = [
+                {
+                    question: "¿Qué es la inteligencia artificial?",
+                    answer: "Es la capacidad de una máquina para imitar funciones humanas como aprender, razonar y tomar decisiones."
+                },
+                {
+                    question: "¿Mencione 3 Inteligencias Artificiales?",
+                    answer: "Las respuestas pueden variar, pero ejemplos comunes incluyen ChatGPT, DALL-E, Midjourney, y asistentes de voz como Siri o Google Assistant."
+                },
+                {
+                    question: "¿Cuáles son las partes de un prompt efectivo?",
+                    answer: "Las cuatro partes son: Rol, Objetivo, Especificación del Contexto y Restricciones/Limitaciones."
+                }
+            ];
+
+            const quizContainer = document.getElementById('quiz-container');
+
+            quizData.forEach((item, index) => {
+                const questionElement = document.createElement('div');
+                questionElement.className = 'my-6 p-4 rounded-2xl bg-gray-50 shadow-inner cursor-pointer transition transform hover:scale-105';
+                questionElement.innerHTML = `
+                    <p class="text-lg font-semibold text-gray-700">${index + 1}. ${item.question}</p>
+                    <p class="answer text-sm mt-2 text-gray-500 hidden">${item.answer}</p>
+                `;
+                quizContainer.appendChild(questionElement);
+
+                questionElement.addEventListener('click', () => {
+                    const answer = questionElement.querySelector('.answer');
+                    answer.classList.toggle('hidden');
+                });
+            });
+
+            // Prompt Builder Logic
+            const rolInput = document.getElementById('rol-input');
+            const objetivoInput = document.getElementById('objetivo-input');
+            const contextoInput = document.getElementById('contexto-input');
+            const restriccionesInput = document.getElementById('restricciones-input');
+            const generateBtn = document.getElementById('generate-prompt-btn');
+            const generatedPrompt = document.getElementById('generated-prompt');
+            
+            generateBtn.addEventListener('click', () => {
+                const rol = rolInput.value.trim();
+                const objetivo = objetivoInput.value.trim();
+                const contexto = contextoInput.value.trim();
+                const restricciones = restriccionesInput.value.trim();
+                
+                let prompt = "";
+                if (rol) {
+                    prompt += `Rol: ${rol}\n`;
+                }
+                if (objetivo) {
+                    prompt += `Objetivo: ${objetivo}\n`;
+                }
+                if (contexto) {
+                    prompt += `Contexto: ${contexto}\n`;
+                }
+                if (restricciones) {
+                    prompt += `Restricciones: ${restricciones}\n`;
+                }
+                
+                if (prompt) {
+                    generatedPrompt.textContent = prompt;
+                } else {
+                    generatedPrompt.textContent = "Por favor, ingresa al menos un campo para generar el prompt.";
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
